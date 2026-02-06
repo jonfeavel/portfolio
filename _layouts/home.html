@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="landing-container">
+    <header class="hero">
+      <div class="bio-pic"></div>
+      <h1>{{ site.title }}</h1>
+      <p class="intro">{{ content }}</p>
+    </header>
+
+    <nav class="pillar-grid">
+      <a href="/portfolio/" class="pillar">Professional Portfolio</a>
+      <a href="/blog/" class="pillar">Blog</a>
+      <a href="/projects/" class="pillar">Side Projects</a>
+      <a href="/contact/" class="pillar">Contact</a>
+    </nav>
+
+    <section class="activity-feed">
+      <h2>Recent Activity</h2>
+      {% assign items = site.exemplars | concat: site.posts | sort: 'date' | reverse %}
+      {% for item in items limit:3 %}
+        <div class="activity-card">
+          <div class="icon-box">{{ item.type | slice: 0 | upcase }}</div>
+          <div class="card-content">
+            <a href="{{ item.url }}"><h3>{{ item.title }}</h3></a>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  </div>
+</body>
+</html>
