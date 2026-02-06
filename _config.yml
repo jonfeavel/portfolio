@@ -1,0 +1,6 @@
+title: Your Portfolio Name
+description: PM and Data Exemplars
+theme: jekyll-theme-minimal
+collections:
+  exemplars:
+    output: true
