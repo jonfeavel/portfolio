@@ -1,8 +1,14 @@
-title: Your Portfolio Name
-description: PM and Data Exemplars
-theme: jekyll-theme-minimal
+title: "J. Feavel"
+url: "https://jfeavel.dev"
+baseurl: ""
 collections:
   exemplars:
     output: true
-url: "https://jfeavel.dev"
-baseurl: ""
+  side_projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
