@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Perspectives Blog"
+permalink: /blog/
 ---
 
 # Perspectives
