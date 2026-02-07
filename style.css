@@ -1,113 +1,107 @@
-/* 2026 Organic Space Strategy Aesthetic */
+/* Final Strategy Aesthetic recalibrated to Mockup */
 :root {
-  --deep-space: #020617; 
-  --panel-bg: rgba(15, 23, 42, 0.75); 
-  --teal-glow: #14b8a6;
-  --accent-blue: #3b82f6;
-  --nebula-purple: #6366f1;
-  --text-primary: #f8fafc;
-  --text-muted: #94a3b8;
-  --border-glass: rgba(255, 255, 255, 0.1);
+  --command-blue: #1e4b8a; /* Specifically for the hero and main nav */
+  --nav-bg: #112240;      /* Darker navy for smaller buttons */
+  --card-bg: #0d1425;     /* Near-black for feed cards */
+  --teal-accent: #5eead4;
+  --text-primary: #ffffff;
 }
 
-body { 
-  font-family: 'Inter', -apple-system, sans-serif; 
-  color: var(--text-primary); 
+body {
   margin: 0;
-  background-color: var(--deep-space);
-  
-  /* ORGANIC SPACE BACKGROUND - No Grid Lines */
-  background-image: 
-    radial-gradient(circle at 15% 25%, rgba(20, 184, 166, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(99, 102, 241, 0.1) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.06) 0%, transparent 60%),
-    /* Organic Star Dust */
-    radial-gradient(1.5px 1.5px at 15% 15%, #fff, transparent),
-    radial-gradient(1px 1px at 30% 60%, rgba(255,255,255,0.6), transparent),
-    radial-gradient(2px 2px at 55% 85%, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1px 1px at 85% 20%, #fff, transparent),
-    radial-gradient(1.2px 1.2px at 90% 55%, rgba(255,255,255,0.5), transparent);
-  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  /* Using your specific background filename */
+  background: url('/assets/jfeavel-background.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
-/* Glassmorphism Containers */
-.landing-container, .detail-content {
-  background: var(--panel-bg);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-radius: 32px;
-  border: 1px solid var(--border-glass);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+.landing-container {
+  max-width: 950px;
   margin: 40px auto;
+  padding: 20px;
 }
 
-.landing-container { max-width: 900px; padding: 50px; }
-
-/* Sidebar (Organic/Transparent) */
-.main-wrapper { display: flex; min-height: 100vh; background: transparent; }
-
-.sidebar { 
-  width: 260px; 
-  background: transparent; 
-  padding: 60px 30px;
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
+/* Hero Section - Wide Banner */
+.hero-box {
+  background: rgba(30, 75, 138, 0.85); /* Command Blue with transparency */
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 25px;
 }
 
-.sidebar a { 
-  color: var(--text-muted); 
-  text-decoration: none; 
-  font-weight: 500;
-  transition: 0.3s; 
-}
-.sidebar a:hover { color: var(--teal-glow); }
-
-/* Content Areas */
-.detail-content { flex: 1; margin: 30px; padding: 50px; }
-
-/* Interactive Pillars */
-.pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 40px 0; }
-.pillar { 
-  background: rgba(255, 255, 255, 0.04); 
-  color: var(--text-primary) !important; 
-  padding: 20px; 
-  text-align: center; 
-  border-radius: 16px; 
-  border: 1px solid var(--border-glass);
-  text-decoration: none; 
-  font-weight: 600; 
-  transition: all 0.4s ease;
-}
-.pillar:hover { 
-  background: rgba(20, 184, 166, 0.15); 
-  border-color: var(--teal-glow);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(20, 184, 166, 0.25);
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 18px; /* Slightly rounded square as seen in mockup */
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-/* Activity Cards */
-.activity-card { 
-  display: flex; 
-  align-items: center; 
-  padding: 24px; 
-  background: rgba(255, 255, 255, 0.03); 
-  border-radius: 20px; 
-  margin-bottom: 20px; 
-  border: 1px solid var(--border-glass);
+.hero-text h1 { margin: 0; font-size: 2.2rem; }
+.hero-text h3 { color: var(--teal-accent); font-size: 1.1rem; margin: 5px 0; }
+.hero-text p { font-size: 0.95rem; line-height: 1.5; opacity: 0.9; }
+
+/* Navigation - Stretched & Pill Styles */
+.pillar-grid {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.pillar {
+  flex: 1;
+  background: var(--command-blue);
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
   transition: 0.3s;
 }
-.activity-card:hover { 
-  background: rgba(255, 255, 255, 0.07); 
-  border-color: var(--accent-blue);
-  transform: translateX(8px);
+
+.pillar.secondary { background: var(--nav-bg); }
+.pillar:hover { filter: brightness(1.2); transform: translateY(-2px); }
+
+/* Activity Feed - Wide Gradient Cards */
+.recent-activity-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
 }
 
-/* Typography Gradient */
-h1, h2, h3 { 
-  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 0;
+.activity-card {
+  background: linear-gradient(180deg, #16203a 0%, #0d1425 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.icon-box { width: 45px; height: 45px; background: var(--accent-blue); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-weight: bold; flex-shrink: 0; }
+.icon-box {
+  width: 40px;
+  height: 40px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%; /* Circular icons as seen in mockup */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.card-text h3 { margin: 0; font-size: 1.1rem; color: #fff; }
+.card-text p { margin: 4px 0 0; font-size: 0.85rem; color: #94a3b8; }
