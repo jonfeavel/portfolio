@@ -20,7 +20,7 @@ permalink: /blog/
   </aside>
 
   <main class="library-content">
-    <h1>Block</h1>
+    <h1>Blog</h1>
     <p class="subtitle">Perspectives and Writing</p>
     
     <p>Below is a curated collection perspectives I've put together throughout my professional journey.</p>
