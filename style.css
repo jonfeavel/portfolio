@@ -143,20 +143,20 @@ body {
 }
 
 .sidebar-nav {
-  list-style: none;
+  list-style: none; /* Removes the dots */
   padding: 0;
   margin: 0;
 }
 
 .sidebar-nav li {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.sidebar-nav a {
-  color: #94a3b8;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+/* This makes the active link glow like your mockup */
+.sidebar-nav a.active {
+  color: var(--teal-accent) !important;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(94, 234, 212, 0.5);
 }
 
 .sidebar-nav a:hover, .sidebar-nav a.active {
