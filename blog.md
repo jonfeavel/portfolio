@@ -11,8 +11,8 @@ permalink: /blog/
       <ul class="sidebar-nav">
         <li><a href="{{ '/' | relative_url }}">← Home</a></li>
         <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
-        <li><a href="{{ '/portfolio/' | relative_url }}" class="active">Portfolio</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" class="active">Blog</a></li>
         <li><a href="{{ '/contact/' | relative_url }}">Contact Me</a></li>
         <li><a href="{{ '/projects/' | relative_url }}">Side Projects</a></li>
       </ul>
