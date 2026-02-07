@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Professional Portfolio"
+permalink: /portfolio/
 ---
 
 # Professional Portfolio
-Below are my technical exemplars and data projects.
+See below for additions to my professional portfolio. 
 
 {% for item in site.exemplars %}
   <div class="activity-card">
