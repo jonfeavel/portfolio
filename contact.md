@@ -1,15 +1,14 @@
 ---
 layout: default
 title: "Contact Me"
+permalink: /contact/
 ---
 
-# Get in Touch
-I’m always open to discussing AI terraforming, data strategy, or product outcomes.
+Please feel welcome to contact me for discussion, or opportunities at the following.
 
-### Professional Links
-* **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com)
-* **GitHub:** [github.com/jonfeavel](https://github.com/jonfeavel)
+* **Email:** [jonfeavel@gmail.com](mailto:jonfeavel@gmail.com)
+* **LinkedIn:** [linkedin.com/in/jonathon-feavel](https://www.linkedin.com/in/jonathon-feavel)
 
-### Direct Contact
-* **Email:** yourname@email.com
-* **Location:** City, State / Remote
+---
+
+> **Note:** contact me, and other contact methods to come in future iterations of this site.
