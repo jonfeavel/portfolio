@@ -1,8 +1,8 @@
-/* Final Strategy Aesthetic recalibrated to Mockup */
+/* Strategy Aesthetic Recalibrated to Mockup */
 :root {
-  --command-blue: #1e4b8a; /* Specifically for the hero and main nav */
-  --nav-bg: #112240;      /* Darker navy for smaller buttons */
-  --card-bg: #0d1425;     /* Near-black for feed cards */
+  --command-blue: #1e4b8a; 
+  --nav-bg: #112240;      
+  --card-bg: #0d1425;     
   --teal-accent: #5eead4;
   --text-primary: #ffffff;
 }
@@ -11,20 +11,20 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: var(--text-primary);
-  /* Using your specific background filename */
   background: url('/assets/jfeavel-background.jpg') no-repeat center center fixed;
   background-size: cover;
+  background-color: #020617;
 }
 
 .landing-container {
   max-width: 950px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 /* Hero Section - Wide Banner */
 .hero-box {
-  background: rgba(30, 75, 138, 0.85); /* Command Blue with transparency */
+  background: rgba(30, 75, 138, 0.85); 
   border-radius: 20px;
   padding: 30px;
   display: flex;
@@ -32,76 +32,83 @@ body {
   gap: 25px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .profile-pic {
   width: 140px;
   height: 140px;
-  border-radius: 18px; /* Slightly rounded square as seen in mockup */
+  border-radius: 20px; /* Slightly rounded square as seen in mockup */
   border: 2px solid rgba(255, 255, 255, 0.5);
   object-fit: cover;
   flex-shrink: 0;
 }
 
-.hero-text h1 { margin: 0; font-size: 2.2rem; }
-.hero-text h3 { color: var(--teal-accent); font-size: 1.1rem; margin: 5px 0; }
-.hero-text p { font-size: 0.95rem; line-height: 1.5; opacity: 0.9; }
+.hero-text h1 { margin: 0; font-size: 2.2rem; line-height: 1.1; }
+.hero-text h3 { color: var(--teal-accent); font-size: 1.1rem; margin: 8px 0; font-weight: 600; }
+.hero-text p { font-size: 0.95rem; line-height: 1.5; opacity: 0.9; margin: 0; }
 
 /* Navigation - Stretched & Pill Styles */
 .pillar-grid {
   display: flex;
   gap: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .pillar {
   flex: 1;
   background: var(--command-blue);
-  padding: 12px;
+  padding: 14px;
   text-align: center;
   border-radius: 10px;
   text-decoration: none;
-  color: white;
+  color: white !important;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-.pillar.secondary { background: var(--nav-bg); }
-.pillar:hover { filter: brightness(1.2); transform: translateY(-2px); }
+.pillar.secondary { background: rgba(17, 34, 64, 0.8); }
+.pillar:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); background: var(--teal-accent); color: #000 !important; }
 
-/* Activity Feed - Wide Gradient Cards */
+/* Activity Feed */
 .recent-activity-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
   margin-bottom: 20px;
   font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .activity-card {
   background: linear-gradient(180deg, #16203a 0%, #0d1425 100%);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 12px;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   gap: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.2s;
 }
 
+.activity-card:hover { border-color: var(--teal-accent); transform: scale(1.01); }
+
 .icon-box {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   background: #3b82f6;
   color: white;
-  border-radius: 50%; /* Circular icons as seen in mockup */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 0.8rem;
+  flex-shrink: 0;
 }
 
-.card-text h3 { margin: 0; font-size: 1.1rem; color: #fff; }
-.card-text p { margin: 4px 0 0; font-size: 0.85rem; color: #94a3b8; }
+.card-text h3 { margin: 0; font-size: 1.15rem; }
+.card-text h3 a { color: #fff; text-decoration: none; }
+.card-text p { margin: 5px 0 0; font-size: 0.9rem; color: #94a3b8; }
