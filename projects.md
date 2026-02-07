@@ -4,13 +4,11 @@ title: "Side Projects"
 permalink: /projects/
 ---
 
-# Side Projects & Sister Sites
-Beyond my professional portfolio, I maintain several projects that explore the boundaries of technology and design.
+# Side Projects
+Beyond my professional portfolio, I do try to get out and explore more creative endevors. 
+I'll be slowly introducing references to those here, but you won't find much for some time. 
 
-### Project Alpha
-*A brief description of what this project is and why it matters.*
-[Visit Site →](https://example.com)
+### Headlines to Comics 
+*One panel comics created by transforming daily news headlines into saterical - and often mediocre - stylized comic art.*
 
-### Project Beta
-*A description of your second sister site.*
-[Visit Site →](https://example.com)
+**[Visit Headlines 2 Comics →](https://www.headlines2comics.com/)**
