@@ -1,12 +1,13 @@
-/* 2026 Deep-Space Strategy Aesthetic */
+/* 2026 Organic Space Strategy Aesthetic */
 :root {
-  --deep-space: #050a14;
-  --panel-bg: rgba(15, 23, 42, 0.7); /* Deep slate with transparency */
+  --deep-space: #020617; /* Even deeper obsidian */
+  --panel-bg: rgba(15, 23, 42, 0.65); /* Increased transparency */
   --teal-glow: #14b8a6;
   --accent-blue: #3b82f6;
+  --nebula-purple: #6366f1;
   --text-primary: #f8fafc;
   --text-muted: #94a3b8;
-  --border-glass: rgba(255, 255, 255, 0.1);
+  --border-glass: rgba(255, 255, 255, 0.08);
 }
 
 body { 
@@ -14,80 +15,94 @@ body {
   color: var(--text-primary); 
   margin: 0;
   background-color: var(--deep-space);
-  /* Space-like Technical Background */
+  /* Organic Nebula & Starfield Effect */
   background-image: 
-    radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 40%),
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
+    radial-gradient(circle at 10% 20%, rgba(20, 184, 166, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 60%),
+    /* This adds tiny "organic" star particles */
+    radial-gradient(1px 1px at 10% 10%, #fff, transparent),
+    radial-gradient(1px 1px at 20% 50%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(2px 2px at 40% 90%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 80% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 95% 60%, rgba(255,255,255,0.4), transparent);
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-/* Landing Page Container */
-.landing-container {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 40px;
+/* Glassmorphism Panels */
+.landing-container, .detail-content {
   background: var(--panel-bg);
-  backdrop-filter: blur(12px);
-  border-radius: 24px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 28px;
   border: 1px solid var(--border-glass);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
 }
 
-/* Sidebar & Navigation */
-.main-wrapper { display: flex; min-height: 100vh; background: transparent; }
+.landing-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 50px;
+}
 
+/* Sidebar (Organic Transparency) */
 .sidebar { 
   width: 260px; 
-  background: transparent; /* Fully transparent per your request */
+  background: transparent; 
   padding: 60px 30px;
-  border-right: 1px solid var(--border-glass);
+  /* Soft organic divider instead of a hard line */
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.sidebar a { color: var(--text-muted); text-decoration: none; transition: 0.3s; }
-.sidebar a:hover { color: var(--teal-glow); }
-
-/* Main Content Panels */
-.detail-content {
-  flex: 1;
-  margin: 30px;
-  padding: 50px;
-  background: var(--panel-bg);
-  backdrop-filter: blur(16px);
-  border-radius: 20px;
-  border: 1px solid var(--border-glass);
-}
-
-/* Pillars / Buttons */
-.pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin: 40px 0; }
+/* Pillars / Buttons (Fluid Glow) */
 .pillar { 
-  background: rgba(20, 184, 166, 0.1); 
-  color: var(--teal-glow) !important; 
+  background: rgba(255, 255, 255, 0.03); 
+  color: var(--text-primary) !important; 
   padding: 20px; 
   text-align: center; 
-  border-radius: 12px; 
-  border: 1px solid rgba(20, 184, 166, 0.3);
+  border-radius: 16px; 
+  border: 1px solid var(--border-glass);
   text-decoration: none; 
   font-weight: 600; 
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.pillar:hover { background: rgba(20, 184, 166, 0.2); transform: translateY(-3px); box-shadow: 0 0 20px rgba(20, 184, 166, 0.2); }
 
-/* Activity Cards */
+.pillar:hover { 
+  background: rgba(20, 184, 166, 0.15); 
+  border-color: var(--teal-glow);
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(20, 184, 166, 0.2);
+}
+
+/* Activity Cards (Soft Depth) */
 .activity-card { 
   display: flex; 
   align-items: center; 
-  padding: 20px; 
-  background: rgba(255, 255, 255, 0.03); 
-  border-radius: 16px; 
-  margin-bottom: 15px; 
+  padding: 24px; 
+  background: rgba(255, 255, 255, 0.02); 
+  border-radius: 20px; 
+  margin-bottom: 20px; 
   border: 1px solid var(--border-glass);
-  transition: 0.2s;
+  transition: 0.3s ease;
 }
-.activity-card:hover { background: rgba(255, 255, 255, 0.06); border-color: var(--accent-blue); }
-.icon-box { width: 45px; height: 45px; background: var(--accent-blue); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-weight: bold; flex-shrink: 0; }
 
-h1, h2, h3 { color: var(--text-primary); }
-.activity-card a { color: var(--teal-glow); text-decoration: none; }
+.activity-card:hover { 
+  background: rgba(255, 255, 255, 0.05); 
+  transform: translateX(5px);
+  border-color: var(--accent-blue);
+}
+
+/* Typography Polish */
+h1, h2, h3 { 
+  letter-spacing: -0.02em;
+  background: linear-gradient(to bottom right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.activity-card a { 
+  color: var(--teal-glow); 
+  text-decoration: none; 
+  font-weight: 600;
+}
