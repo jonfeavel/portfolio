@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: var(--text-primary);
+  /* Added a leading slash to ensure the path is absolute from the root */
   background: url('/assets/jfeavel-background.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color: #020617;
