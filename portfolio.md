@@ -1,5 +1,6 @@
 ---
 layout: null
+permalink: /portfolio/
 ---
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
