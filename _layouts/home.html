@@ -11,11 +11,11 @@
       <p class="intro">{{ content }}</p>
     </header>
 
-    <nav class="pillar-grid">
-      <a href="/portfolio/" class="pillar">Professional Portfolio</a>
-      <a href="/blog/" class="pillar">Blog</a>
-      <a href="/projects/" class="pillar">Side Projects</a>
-      <a href="/contact/" class="pillar">Contact</a>
+<nav class="pillar-grid">
+      <a href="{{ '/portfolio/' | relative_url }}" class="pillar">Professional Portfolio</a>
+      <a href="{{ '/blog/' | relative_url }}" class="pillar">Blog</a>
+      <a href="{{ '/projects/' | relative_url }}" class="pillar">Side Projects</a>
+      <a href="{{ '/contact/' | relative_url }}" class="pillar">Contact</a>
     </nav>
 
     <section class="activity-feed">
