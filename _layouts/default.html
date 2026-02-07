@@ -1,42 +1,44 @@
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | J. Feavel</title>
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
-
-<div class="container">
-  <header class="site-header">
-    <div class="bio-pic"></div>
-    <div class="title-text">
-      <h1>Website Title</h1>
-      <h3>Sub header explanation of site</h3>
-      <p>Content paragraph describing the vision and purpose of this space.</p>
-    </div>
-  </header>
-
-  <nav class="main-nav">
-    <a href="#portfolio" class="nav-btn">Professional Portfolio</a>
-    <a href="#blog" class="nav-btn">Blog</a>
-    <a href="#contact" class="nav-btn">Contact</a>
-  </nav>
-
-  <main class="content-wrapper">
-    <aside class="sidebar">
-      <h4>Sidebar Menu</h4>
-      <ul>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Other</a></li>
-      </ul>
-    </aside>
-
-    <section class="main-content">
-      <h2>Website Section Header</h2>
-      <p class="sub-header">(For Portfolio, Blog, Contact, other)</p>
-      <div class="content-body">
-        <p>List out clickable static pages...</p>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="title-text">
+        <a href="{{ '/' | relative_url }}" style="text-decoration:none; color:inherit;">
+          <h1>J. Feavel</h1>
+        </a>
       </div>
-    </section>
-  </main>
-</div>
+    </header>
+
+    <main class="content-wrapper">
+      <aside class="sidebar">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}">Side Projects</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        </ul>
+      </aside>
+
+      <section class="main-content">
+        <h2>{{ page.title }}</h2>
+        
+        <p class="sub-header">
+          {% if page.type %}<strong>Type:</strong> {{ page.type }}{% endif %}
+          {% if page.tools %} | <strong>Tools:</strong> {{ page.tools }}{% endif %}
+        </p>
+
+        <div class="content-body">
+          {{ content }}
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
