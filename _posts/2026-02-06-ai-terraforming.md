@@ -2,10 +2,11 @@
 layout: post
 title: "AI is Terraforming the Tech Industry"
 categories: blog
-type: "Blog"
+type: "B"
 description: "How AI is shifting the advantage toward outcomes over technical barriers."
 date: 2026-02-06
 ---
+
 
 # How AI is Shifting the Advantage Toward Outcome-Driven Citizens
 “AI” has quickly become one of the most overused words in professional discourse—often repeated with confidence, but rarely with precision. Despite widespread claims of transformation, many organizations still struggle to articulate what AI truly enables or how it redistributes power between institutions and individuals.
