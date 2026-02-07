@@ -1,24 +1,28 @@
+/* Professional 2026 Strategy Aesthetic */
 :root {
   --teal: #165a78;
-  --bg: #f8fafc;
-  --text: #1e293b;
-  --card-bg: #ffffff;
+  --slate: #f1f5f9;
+  --text-main: #1e293b;
+  --accent: #3b82f6;
 }
 
-body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color: var(--text-main); margin: 0; }
 
-/* Landing Page Specifics */
-.landing-container { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
-.hero { text-align: center; margin-bottom: 50px; }
-.pillar-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 50px; }
-.pillar { background: var(--teal); color: white; padding: 25px; text-align: center; border-radius: 12px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-.pillar:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+/* Landing Page Hero */
+.hero { text-align: center; padding: 60px 20px; max-width: 800px; margin: 0 auto; }
+.bio-pic { width: 100px; height: 100px; background: var(--teal); border-radius: 50%; margin: 0 auto 20px; }
 
-/* Activity Card Styling */
-.activity-card { display: flex; background: var(--card-bg); padding: 20px; margin-bottom: 15px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); align-items: center; }
-.icon-box { width: 50px; height: 50px; background: #3b82f6; color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-weight: bold; }
+/* Button Grid */
+.pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto 50px; padding: 0 20px; }
+.pillar { background: var(--teal); color: white !important; padding: 20px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: 0.2s; }
+.pillar:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
 
-/* Sidebar Layout */
+/* Activity Cards */
+.activity-feed { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+.activity-card { display: flex; align-items: center; padding: 20px; background: var(--slate); border-radius: 12px; margin-bottom: 15px; border: 1px solid #e2e8f0; }
+.icon-box { width: 50px; height: 50px; background: var(--accent); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-weight: bold; flex-shrink: 0; }
+
+/* Sidebar Layout (The "Sub-Pages") */
 .main-wrapper { display: flex; min-height: 100vh; }
-.sidebar { width: 260px; background: #fff; border-right: 1px solid #e2e8f0; padding: 40px 20px; position: sticky; top: 0; height: 100vh; }
-.detail-content { flex: 1; padding: 60px; max-width: 800px; }
+.sidebar { width: 280px; background: var(--slate); border-right: 1px solid #e2e8f0; padding: 40px 20px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+.detail-content { flex: 1; padding: 60px 40px; max-width: 900px; }
