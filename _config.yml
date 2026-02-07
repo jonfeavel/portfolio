@@ -1,14 +1,24 @@
 title: "J. Feavel"
+description: "Portfolio & Perspectives"
 url: "https://jfeavel.dev"
-baseurl: ""
+baseurl: "" # Leave this empty since you are using a custom domain
+
+# This tells Jekyll to look for folders starting with an underscore
 collections:
   exemplars:
     output: true
+    permalink: /portfolio/:path/
   side_projects:
     output: true
+    permalink: /projects/:path/
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+# This ensures Markdown files are processed correctly
+markdown: kramdown
+theme: jekyll-theme-minimal
+
+# This tells Jekyll to ignore certain files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .jpt
