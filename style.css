@@ -26,3 +26,26 @@ body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color:
 .main-wrapper { display: flex; min-height: 100vh; }
 .sidebar { width: 280px; background: var(--slate); border-right: 1px solid #e2e8f0; padding: 40px 20px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
 .detail-content { flex: 1; padding: 60px 40px; max-width: 900px; }
+
+/* Finishing Touches */
+.sidebar h4 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li { margin-bottom: 15px; }
+.sidebar a { 
+  text-decoration: none; 
+  color: var(--text-main); 
+  font-weight: 500; 
+}
+.sidebar a:hover { color: var(--accent); }
+
+/* Fix for the Activity Card titles */
+.card-content h3 { margin: 0 0 5px 0; color: var(--teal); text-decoration: none; }
+.card-content p { margin: 0; font-size: 0.9rem; color: #64748b; }
+.activity-card a { text-decoration: none; }
