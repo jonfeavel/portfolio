@@ -1,18 +1,44 @@
 ---
-layout: default
-title: "Perspectives Blog"
-permalink: /blog/
+layout: null
 ---
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
-# Perspectives
-Reflections on AI, product strategy, and the shifting tech landscape.
+<div class="library-wrapper">
 
-{% for post in site.posts %}
-  <div class="activity-card">
-    <div class="icon-box">B</div>
-    <div class="card-content">
-      <a href="{{ post.url | relative_url }}"><h3>{{ post.title }}</h3></a>
-      <p>{{ post.description }}</p>
+  <aside class="library-sidebar">
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="{{ '/' | relative_url }}">← Home</a></li>
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
+        <li><a href="{{ '/portfolio/' | relative_url }}" class="active">Portfolio</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">Contact Me</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Side Projects</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="library-content">
+    <h1>Block</h1>
+    <p class="subtitle">Perspectives and Writing</p>
+    
+    <p>Below is a curated collection perspectives I've put together throughout my professional journey.</p>
+
+    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 40px 0;">
+
+    <div class="activity-feed">
+      {% for item in site.posts %}
+        {% if item.categories contains 'portfolio' %}
+          <div class="activity-card">
+            <div class="icon-box">{{ item.type | slice: 0 | upcase }}</div>
+            <div class="card-text">
+              <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
-  </div>
-{% endfor %}
+  </main>
+
+</div>
