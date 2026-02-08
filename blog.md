@@ -23,13 +23,13 @@ permalink: /blog/
     <h1>Blog</h1>
     <p class="subtitle">Perspectives and Writing</p>
     
-    <p>Below is a curated collection perspectives I've put together throughout my professional journey.</p>
+    <p>Below is a curated collection of perspectives I've put together throughout my professional journey.</p>
 
     <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 40px 0;">
 
     <div class="activity-feed">
       {% for item in site.posts %}
-        {% if item.categories contains 'portfolio' %}
+        {% if item.categories contains 'blog' %}
           <div class="activity-card">
             <div class="icon-box">{{ item.type | slice: 0 | upcase }}</div>
             <div class="card-text">
