@@ -11,7 +11,7 @@ title: Home
     <div class="hero-text">
       <h1>J Feavel</h1>
       <h3>Simplifying Complexity as AI Terraforms the Tech Industry</h3>
-      <p>I believe AI is terraforming the tech industry, shifting the advantage toward those with a diversified technical acumen and an uncompromising focus on outcomes. My mission is to make the complex simple.</p>
+      <p>I believe AI is terraforming the tech industry, shifting advantage toward those who combine technical curiosity with an unwavering focus on outcomes.  In my pursuit of making complex systems more approachable, I share practical exemplars and perspectives from my journey in technology. This site is how I document a small piece of what I’m learning—and what’s working.</p>
     </div>
   </header>
 
