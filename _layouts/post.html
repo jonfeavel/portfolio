@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="library-wrapper">
+  <aside class="library-sidebar">
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="{{ '/' | relative_url }}">← Home</a></li>
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
+        <li><a href="{{ '/portfolio/' | relative_url }}" {% if page.categories contains 'portfolio' %}class="active"{% endif %}>Portfolio</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" {% if page.categories contains 'blog' %}class="active"{% endif %}>Blog</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">Contact Me</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Side Projects</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="library-content">
+    <header class="post-header-box">
+      <div class="post-meta-top">
+        <div class="icon-box">{{ page.type | slice: 0 | upcase }}</div>
+        <div class="post-title-group">
+          <h1>{{ page.title }}</h1>
+          <span class="post-type-label">Type: {{ page.type }}</span>
+        </div>
+      </div>
+      <p class="post-description-lead">{{ page.description }}</p>
+    </header>
+
+    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 30px 0;">
+
+    <article class="post-body-content">
+      {{ content }}
+    </article>
+  </main>
+</div>
