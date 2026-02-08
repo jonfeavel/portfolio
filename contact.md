@@ -29,7 +29,7 @@ permalink: /contact/
       <div class="icon-box">@</div>
       <div class="card-text">
         <h3>Email</h3>
-        <p><a href="mailto:your-email@example.com" style="color: var(--teal-accent); text-decoration: none;">your-email@example.com</a></p>
+        <p><a href="mailto:jonfeavel@gmail.com" style="color: var(--teal-accent); text-decoration: none;">jonfeavel@gmail.com</a></p>
       </div>
     </div>
 
@@ -37,7 +37,7 @@ permalink: /contact/
       <div class="icon-box">in</div>
       <div class="card-text">
         <h3>LinkedIn</h3>
-        <p><a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--teal-accent); text-decoration: none;">linkedin.com/in/yourprofile</a></p>
+        <p><a href="https://www.linkedin.com/in/jonathon-feavel" target="_blank" style="color: var(--teal-accent); text-decoration: none;">linkedin.com/in/jonathon-feavel</a></p>
       </div>
     </div>
   </main>
