@@ -6,34 +6,6 @@
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 <body>
-  <div class="main-wrapper"> <aside class="sidebar"> <a href="{{ '/' | relative_url }}" style="font-weight: bold; text-decoration: none; color: var(--teal);">← Home</a>
-      <nav style="margin-top: 30px;">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
-          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-          <li><a href="{{ '/projects/' | relative_url }}">Side Projects</a></li>
-          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <main class="detail-content"> <section class="main-content">
-        <h1>{{ page.title }}</h1>
-        
-        <p class="sub-header" style="color: #64748b; margin-bottom: 20px;">
-          {% if page.type %}<strong>Type:</strong> {{ page.type }}{% endif %}
-          {% if page.tools %} | <strong>Tools:</strong> {{ page.tools }}{% endif %}
-        </p>
-
-        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin-bottom: 30px;">
-
-        <div class="content-body">
-          {{ content }}
-        </div>
-      </section>
-    </main>
-    
-  </div>
+  {{ content }}
 </body>
 </html>
