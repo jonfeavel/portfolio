@@ -22,8 +22,6 @@ permalink: /contact/
   <main class="library-content">
     <h1>Contact Me</h1>
     <p class="subtitle">Let's Connect</p>
-    
-    <p>Whether you have a question about a framework, a project, or just want to discuss the shifting landscape of tech, my door is always open.</p>
 
     <div class="activity-card" style="margin-top: 40px;">
       <div class="icon-box">@</div>
