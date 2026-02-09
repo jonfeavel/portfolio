@@ -1,4 +1,4 @@
-/* Strategy Aesthetic Recalibrated to Mockup */
+/* Strategy Aesthetic Recalibrated - Full File Replacement */
 :root {
   --command-blue: #1e4b8a; 
   --nav-bg: #112240;      
@@ -19,92 +19,76 @@ body {
   background-color: #020617; 
 }
 
-.landing-container {
-  max-width: 950px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-/* Hero Section - Wide Banner */
-.hero-box {
-  background: rgba(30, 75, 138, 0.85); 
-  border-radius: 20px;
-  padding: 30px;
+/* 1. Global Container Fix */
+.library-wrapper {
   display: flex;
-  align-items: center;
-  gap: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  gap: 40px;
+  align-items: flex-start;
 }
 
-.profile-pic {
-  width: 140px;
-  height: 140px;
-  border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  object-fit: cover;
-  flex-shrink: 0;
+/* 2. Sidebar Maintenance */
+.library-sidebar {
+  width: 250px;
+  background: rgba(30, 75, 138, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px 20px;
+  position: sticky;
+  top: 40px;
 }
 
-.hero-text h1 { margin: 0; font-size: 2.2rem; line-height: 1.1; }
-.hero-text h3 { color: var(--teal-accent); font-size: 1.1rem; margin: 8px 0; font-weight: 600; }
-.hero-text p { font-size: 0.95rem; line-height: 1.5; opacity: 0.9; margin: 0; }
+.sidebar-nav { list-style: none; padding: 0; margin: 0; }
+.sidebar-nav li { margin-bottom: 20px; }
+.sidebar-nav a { text-decoration: none; color: #94a3b8; transition: 0.3s; }
+.sidebar-nav a.active { color: var(--teal-accent) !important; font-weight: 700; text-shadow: 0 0 10px rgba(94, 234, 212, 0.5); }
 
-/* Navigation - Stretched & Pill Styles */
-.pillar-grid {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 50px;
-}
-
-.pillar {
+/* 3. The "Glass" Content Surface Fix */
+.library-content {
   flex: 1;
-  background: var(--command-blue);
-  padding: 14px;
-  text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white !important;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
+  /* This ensures the glass container itself is centered and limited in width */
+  max-width: 900px; 
 }
 
-.pillar.secondary { background: rgba(17, 34, 64, 0.8); }
-.pillar:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); background: var(--teal-accent); color: #000 !important; }
-
-/* Activity Feed */
-.recent-activity-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  font-size: 1.4rem;
-  font-weight: 700;
+article, .post-header-box {
+  background: rgba(10, 20, 40, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  margin-bottom: 40px;
 }
 
-.activity-card {
-  background: linear-gradient(180deg, #16203a 0%, #0d1425 100%);
-  border-radius: 14px;
-  padding: 22px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: 0.2s;
+/* 4. Line Length Constraint (The 720px-820px Goal) */
+.post-body, .post-description, .post-title-group {
+  max-width: 760px; /* Perfect mid-range */
+  margin: 0 auto;
 }
 
-.activity-card:hover { border-color: var(--teal-accent); transform: scale(1.01); }
+/* 5. Typography Polish */
+h1 { font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2; }
+.post-type-label { color: var(--teal-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+p { margin-bottom: 24px; line-height: 1.7; color: #cbd5e1; font-size: 1.05rem; }
 
-.icon-box {
-  width: 42px;
-  height: 42px;
-  background: #3b82f6;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 6. Image Handling within the Glass Container */
+article img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 20px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .library-wrapper { flex-direction: column; }
+  .library-sidebar { width: 100%; position: relative; top: 0; margin-bottom: 20px; }
+  article { padding: 25px; }
+}
