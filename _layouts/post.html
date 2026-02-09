@@ -2,7 +2,6 @@
 layout: default
 ---
 <div class="library-wrapper">
-
   <aside class="library-sidebar">
     <nav>
       <ul class="sidebar-nav">
@@ -17,16 +16,14 @@ layout: default
   </aside>
 
   <main class="library-content">
-    
-    <header class="post-header-box">
-      <div class="post-meta-top">
-        <div class="icon-box">{{ page.type | slice: 0 | upcase }}</div>
-        <div class="post-title-group">
-          <h1 style="margin:0;">{{ page.title }}</h1>
-          <span class="post-type-label">TYPE: {{ page.type | upcase }}</span>
-        </div>
+    <header class="post-header-container">
+      <img src="{{ '/assets/project-icon.png' | relative_url }}" class="header-icon" alt="Project Icon">
+      
+      <div class="header-text-block">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <div class="post-meta">TYPE: {{ page.type | upcase }}</div>
+        <p class="post-description">{{ page.description }}</p>
       </div>
-      <p class="post-description-lead">{{ page.description }}</p>
     </header>
 
     <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 30px 0;">
@@ -34,6 +31,5 @@ layout: default
     <article class="post-body-content">
       {{ content }}
     </article>
-    
   </main>
 </div>
