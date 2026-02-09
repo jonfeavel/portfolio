@@ -26,10 +26,10 @@ I combined quantitative analysis with contextual framing—personas, journeys, a
 I utilized the **Ask → Prepare → Process → Analyze → Share → Act** framework to ensure insights were both statistically valid and relevant to business decisions.
 
 ![Contextualized Framing]({{ '/assets/bellabeat-framing.png' | relative_url }})
-*Figure 3: Preliminary steps taken to gather insights and map data schemas before deep dissection.*
+*Figure 3: Preliminary steps taken to gather insights and map data schemas.*
 
 ![User Personas]({{ '/assets/bellabeat-personas.png' | relative_url }})
-*Figure 4: Baseline personas (Lena, Sofia, Ava, Rachel) used to anchor the data in real-world human motivations and pain points.*
+*Figure 4: Baseline personas (Lena, Sofia, Ava, Rachel) used to anchor the data in real-world human motivations.*
 
 ---
 
@@ -37,10 +37,10 @@ I utilized the **Ask → Prepare → Process → Analyze → Share → Act** fra
 The analysis surfaced clear relationships between activity volume, intensity, and time-of-day usage patterns.
 
 ![The Six Key Findings]({{ '/assets/bellabeat-findings.png' | relative_url }})
-*Figure 5: Summary of the six core observations, ranging from calorie burn correlations to data gaps.*
+*Figure 5: Summary of core observations ranging from calorie burn correlations to data gaps.*
 
 ![Data Visualizations]({{ '/assets/bellabeat-insights.jpg' | relative_url }})
-*Figure 6: Deep dive into hourly steps and behavioral segments derived from average daily activity.*
+*Figure 6: Deep dive into hourly steps and behavioral segments derived from activity data.*
 
 ---
 
@@ -57,7 +57,7 @@ The analysis surfaced clear relationships between activity volume, intensity, an
   </div>
   <div class="rec-card">
     <h4>Real-Time Feedback</h4>
-    <p>Extend live notifications and calorie progress feedback through wearable integrations to reinforce goal completion.</p>
+    <p>Extend live notifications and progress feedback through wearable integrations to reinforce goal completion.</p>
   </div>
 </div>
 
@@ -66,4 +66,4 @@ The analysis surfaced clear relationships between activity volume, intensity, an
 ## Full Executive Briefing
 For the complete technical methodology including SQL queries and the full slide deck:
 
-[Download Case Study PDF]({{ '/assets/your-actual-filename.pdf' | relative_url }})
+[View Full Case Study (PDF)](https://github.com/user-attachments/files/25140468/2025.10.15.-.Google.Data.Analysis.Capstone.-.Bellabeat.pdf)
