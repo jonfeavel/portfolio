@@ -1,10 +1,11 @@
-/* --- CORE BRANDING & VARIABLES --- */
+/* Strategy Aesthetic - Full Functional Restore */
 :root {
   --command-blue: #1e4b8a; 
   --nav-bg: #112240;      
   --card-bg: #0d1425;     
   --teal-accent: #5eead4;
   --text-primary: #ffffff;
+  --text-dim: #94a3b8;
 }
 
 body {
@@ -19,38 +20,28 @@ body {
   background-color: #020617; 
 }
 
-/* --- SECTION 1: HOMEPAGE / LANDING LAYOUT (RESTORED) --- */
-.landing-container {
-  max-width: 950px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
+/* 1. LAYOUT & GLASS CONTAINERS */
+.landing-container { max-width: 950px; margin: 60px auto; padding: 0 20px; }
+.library-wrapper { display: flex; max-width: 1300px; margin: 0 auto; padding: 40px 20px; gap: 40px; }
+.library-content { flex: 1; }
 
-.hero-box {
-  background: rgba(30, 75, 138, 0.85); 
-  border-radius: 20px;
+article, .post-header-box, .activity-card, .hero-box {
+  background: rgba(10, 20, 40, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
   padding: 30px;
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
-.profile-pic {
-  width: 140px;
-  height: 140px;
-  border-radius: 20px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.pillar-grid {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 50px;
+/* 2. FIX: HOVER STATES (Item 1 & 2) */
+.activity-card:hover, .pillar:hover, .rec-card:hover {
+  border-color: var(--teal-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(30, 75, 138, 0.4);
 }
 
 .pillar {
@@ -64,96 +55,65 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.85rem;
-  transition: 0.3s;
   border: 1px solid rgba(255,255,255,0.1);
 }
 
-.activity-card {
-  background: linear-gradient(180deg, #16203a 0%, #0d1425 100%);
-  border-radius: 14px;
-  padding: 22px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* 3. FIX: UNREADABLE PURPLE & LINKS (Item 3 & 4) */
+a { color: var(--teal-accent); text-decoration: none; }
+a:visited { color: var(--teal-accent); } /* Forces teal even if visited */
+
+.activity-card h3 a, .post-title {
+  color: #ffffff !important;
+  text-decoration: none;
 }
 
-/* --- SECTION 2: LIBRARY / ASSET PAGE LAYOUT (RESTORED) --- */
-.library-wrapper {
-  display: flex;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  gap: 40px;
-}
+.activity-card h3 a:hover { color: var(--teal-accent) !important; }
 
+/* 4. FIX: SIDEBAR & ACTIVE HIGHLIGHT (Item 4) */
 .library-sidebar {
   width: 250px;
-  background: rgba(30, 75, 138, 0.3);
+  background: rgba(10, 20, 40, 0.6);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 30px 20px;
-  height: fit-content;
   position: sticky;
   top: 40px;
 }
 
-.library-content { flex: 1; }
-
-/* --- SECTION 3: NEW UPDATES (GLASS, ICON, LINE LENGTH) --- */
-
-/* Glass Surface Container */
-article, .post-header-box {
-  background: rgba(10, 20, 40, 0.85); /* Your specific RGBA request */
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 16px;
-  padding: 40px; 
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 30px;
+.sidebar-nav { list-style: none; padding: 0; }
+.sidebar-nav li { margin-bottom: 18px; }
+.sidebar-nav a { 
+  color: var(--text-dim) !important; 
+  font-weight: 500; 
+  transition: 0.2s;
 }
 
-/* Left-Justified Header with Icon */
-.post-header-container {
+.sidebar-nav a:hover, .sidebar-nav a.active { 
+  color: var(--teal-accent) !important; 
+  text-shadow: 0 0 8px rgba(94, 234, 212, 0.4);
+}
+
+/* 5. FIX: ICON BOX (Item 5) */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background: var(--command-blue);
+  color: white;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 30px;
-  text-align: left;
-}
-
-.header-icon {
-  width: 85px;
-  height: 85px;
-  object-fit: contain;
+  justify-content: center;
+  font-weight: 800;
   flex-shrink: 0;
-}
-
-.post-title { font-size: 2.2rem; margin: 0; }
-.post-meta { color: var(--teal-accent); font-weight: bold; font-size: 0.9rem; }
-.post-description { color: #94a3b8; font-size: 1.1rem; margin-top: 5px; }
-
-/* Body Text Constraint (The 720-820px Goal) */
-.post-body p, article p {
-  max-width: 780px; 
-  margin-left: 0; 
-  margin-right: auto;
-  line-height: 1.7;
-}
-
-/* RESTORED: Strategic Recommendation Tiles */
-.recommendation-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin: 40px 0;
-}
-
-.rec-card {
-  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--teal-accent);
-  padding: 25px;
-  border-radius: 12px;
 }
+
+/* 6. ASSET PAGE SPECIFICS */
+.post-header-container { display: flex; align-items: center; gap: 25px; }
+.header-icon { width: 80px; height: 80px; object-fit: contain; }
+.post-body p { max-width: 780px; line-height: 1.7; color: #cbd5e1; margin-bottom: 20px; }
+
+/* Recommendation Tiles (Restored) */
+.recommendation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 0; }
+.rec-card { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--teal-accent); padding: 25px; border-radius: 12px; }
