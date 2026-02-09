@@ -1,4 +1,4 @@
-/* Strategy Aesthetic - Full Functional Restore */
+/* Strategy Aesthetic - Sidebar & Tile Refinement */
 :root {
   --command-blue: #1e4b8a; 
   --nav-bg: #112240;      
@@ -20,100 +20,114 @@ body {
   background-color: #020617; 
 }
 
-/* 1. LAYOUT & GLASS CONTAINERS */
-.landing-container { max-width: 950px; margin: 60px auto; padding: 0 20px; }
-.library-wrapper { display: flex; max-width: 1300px; margin: 0 auto; padding: 40px 20px; gap: 40px; }
-.library-content { flex: 1; }
-
-article, .post-header-box, .activity-card, .hero-box {
-  background: rgba(10, 20, 40, 0.85);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
+/* 1. LAYOUT - FIXING THE SIDEBAR SQUEEZE */
+.library-wrapper {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 40px;
+  align-items: flex-start; /* Ensures sidebar doesn't stretch vertically */
 }
 
-/* 2. FIX: HOVER STATES (Item 1 & 2) */
-.activity-card:hover, .pillar:hover, .rec-card:hover {
-  border-color: var(--teal-accent);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  background: rgba(30, 75, 138, 0.4);
-}
-
-.pillar {
-  flex: 1;
-  background: var(--command-blue);
-  padding: 14px;
-  text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white !important;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* 3. FIX: UNREADABLE PURPLE & LINKS (Item 3 & 4) */
-a { color: var(--teal-accent); text-decoration: none; }
-a:visited { color: var(--teal-accent); } /* Forces teal even if visited */
-
-.activity-card h3 a, .post-title {
-  color: #ffffff !important;
-  text-decoration: none;
-}
-
-.activity-card h3 a:hover { color: var(--teal-accent) !important; }
-
-/* 4. FIX: SIDEBAR & ACTIVE HIGHLIGHT (Item 4) */
 .library-sidebar {
-  width: 250px;
+  width: 260px;       /* Fixed width */
+  min-width: 260px;   /* Prevents the 'scrunched' two-line issue */
   background: rgba(10, 20, 40, 0.6);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  padding: 30px 20px;
+  padding: 30px 24px;
   position: sticky;
   top: 40px;
 }
 
-.sidebar-nav { list-style: none; padding: 0; }
-.sidebar-nav li { margin-bottom: 18px; }
+.library-content {
+  flex: 1;
+  min-width: 0; /* Prevents content from pushing sidebar off-screen */
+}
+
+/* 2. SIDEBAR NAVIGATION & LINKS */
+.sidebar-nav { list-style: none; padding: 0; margin: 0; }
+.sidebar-nav li { margin-bottom: 20px; }
 .sidebar-nav a { 
   color: var(--text-dim) !important; 
-  font-weight: 500; 
-  transition: 0.2s;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap; /* Forces 'Contact Me' to stay on one line */
 }
 
-.sidebar-nav a:hover, .sidebar-nav a.active { 
+.sidebar-nav a:hover, 
+.sidebar-nav a.active { 
   color: var(--teal-accent) !important; 
-  text-shadow: 0 0 8px rgba(94, 234, 212, 0.4);
+  text-shadow: 0 0 10px rgba(94, 234, 212, 0.3);
 }
 
-/* 5. FIX: ICON BOX (Item 5) */
-.icon-box {
-  width: 48px;
-  height: 48px;
-  background: var(--command-blue);
-  color: white;
-  border-radius: 10px;
+/* Kill visited purple */
+a:visited { color: inherit; }
+
+/* 3. ASSET PAGE CONTENT SURFACE */
+article, .post-header-box {
+  background: rgba(10, 20, 40, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+}
+
+.post-body p {
+  max-width: 780px; /* Constrained line length */
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 24px;
+}
+
+/* 4. STATIC RECOMMENDATION TILES (No Hover Effect) */
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.rec-card {
+  /* Design based on your screenshot: Solid Teal blocks */
+  background: var(--teal-accent);
+  color: #0d1425;
+  padding: 30px;
+  border-radius: 12px;
+  /* Removal of interactive cues */
+  cursor: default;
+  transition: none; 
+  border: none;
+}
+
+.rec-card h4 {
+  margin: 0 0 10px 0;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #0d1425;
+}
+
+.rec-card p {
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 500;
+  color: #0d1425;
+}
+
+/* 5. HEADER ICON LOGIC */
+.post-header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  flex-shrink: 0;
-  border: 1px solid var(--teal-accent);
+  gap: 25px;
+  margin-bottom: 20px;
 }
 
-/* 6. ASSET PAGE SPECIFICS */
-.post-header-container { display: flex; align-items: center; gap: 25px; }
-.header-icon { width: 80px; height: 80px; object-fit: contain; }
-.post-body p { max-width: 780px; line-height: 1.7; color: #cbd5e1; margin-bottom: 20px; }
-
-/* Recommendation Tiles (Restored) */
-.recommendation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 0; }
-.rec-card { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--teal-accent); padding: 25px; border-radius: 12px; }
+.header-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
