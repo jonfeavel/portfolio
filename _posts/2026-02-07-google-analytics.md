@@ -39,7 +39,7 @@ The analysis surfaced clear relationships between activity volume, intensity, an
 ![The Six Key Findings]({{ '/assets/bellabeat-findings.png' | relative_url }})
 *Figure 5: Summary of core observations ranging from calorie burn correlations to data gaps.*
 
-![Data Visualizations]({{ '/assets/bellabeat-insights.jpg' | relative_url }})
+![Data Visualizations]({{ '/assets/bellabeat-insights.png' | relative_url }})
 *Figure 6: Deep dive into hourly steps and behavioral segments derived from activity data.*
 
 ---
