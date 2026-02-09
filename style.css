@@ -172,17 +172,44 @@ a:hover { text-decoration: underline; }
 /* =========================================
    5. COMPONENT: HOME PAGE PILLARS
    ========================================= */
-.hero-box {
-  background: rgba(10, 20, 40, 0.6);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 40px;
-  margin-bottom: 30px;
+/* --- 5. COMPONENT: HOME PAGE PILLARS --- */
+/* This matches the HTML currently in your index.md */
+
+.pillar-grid {
   display: flex;
-  align-items: center;
-  gap: 30px;
+  gap: 15px;
+  margin: 20px 0 40px 0;
 }
 
-.profile-pic {
-  width: 140px;
+/* 1. Standard Button (Portfolio, Blog) */
+.pillar {
+  flex: 1;
+  display: block;             /* Makes it a box, not just text */
+  background: #1e4b8a;        /* Command Blue */
+  padding: 14px;
+  text-align: center;
+  border-radius: 8px;
+  color: white !important;    /* Force text white */
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s ease;
+}
+
+.pillar:hover {
+  background: #2a62b3;
+  transform: translateY(-2px);
+  border-color: #5eead4;      /* Teal accent on hover */
+}
+
+/* 2. Secondary Button (Side Projects, Contact) */
+/* This was missing! It styles the buttons that have class="pillar secondary" */
+.pillar.secondary {
+  background: rgba(255, 255, 255, 0.05); /* Transparent/Ghost button */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pillar.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+}
