@@ -273,3 +273,44 @@ article em {
   margin-bottom: 40px;
   font-style: italic;
 }
+
+/* Header Layout: Icon on Left, Text Block on Right */
+.post-header-container {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+  gap: 25px;               /* Space between icon and text */
+  margin-bottom: 20px;
+}
+
+.header-icon {
+  width: 80px;             /* Adjust size as needed */
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;          /* Prevents icon from squishing */
+}
+
+.header-text-block {
+  display: flex;
+  flex-direction: column;  /* Stacks Title, Type, and Description */
+  justify-content: flex-start;
+}
+
+.post-title {
+  margin: 0 0 5px 0 !important; /* Tightens space above Type label */
+  line-height: 1.2;
+}
+
+.post-meta {
+  color: var(--teal-accent); /* Using your existing teal variable */
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.post-description {
+  margin: 0;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
