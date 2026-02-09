@@ -1,8 +1,10 @@
-/* --- 1. CORE THEME & RESET --- */
+/* =========================================
+   1. CORE THEME & VARIABLES
+   ========================================= */
 :root {
   --command-blue: #1e4b8a; 
   --nav-bg: #112240;      
-  --card-bg: rgba(13, 20, 37, 0.7); /* Slightly transparent for depth */    
+  --card-bg: rgba(13, 20, 37, 0.85); /* Dark semi-transparent background */    
   --teal-accent: #5eead4;
   --text-primary: #ffffff;
   --text-dim: #94a3b8;
@@ -13,19 +15,38 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
   color: var(--text-primary);
-  background: #020617 url('/assets/jfeavel-background.png') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #020617;
+  overflow-x: hidden; /* Prevents horizontal scroll on mobile */
 }
 
-/* --- 2. LAYOUT CONTAINERS --- */
-/* Home Page Container */
+/* Fixed Background Image Layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/jfeavel-background.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* =========================================
+   2. UNIVERSAL LAYOUTS
+   ========================================= */
+
+/* A. Landing Page Layout (Centered, No Sidebar) */
 .landing-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 60px 20px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Blog/Portfolio Page Container (Sidebar Layout) */
+/* B. Library Layout (Sidebar + Content) */
+/* Used for Blog, Portfolio, and Individual Asset Pages */
 .library-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -33,25 +54,124 @@ body {
   display: flex;
   gap: 40px;
   align-items: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
+/* Sidebar Styling */
 .library-sidebar {
   width: 200px;
   flex-shrink: 0;
+  position: sticky;
+  top: 40px;
 }
 
-/* Main Content Area for Blog/Asset Pages */
+/* Main Content Box (The "Card" that holds the text) */
 .library-content, article {
   flex: 1;
-  min-width: 0;
-  background: rgba(10, 20, 40, 0.85); /* Darker backing for reading text */
+  min-width: 0; /* CRITICAL: Allows flex child to shrink below content size */
+  background: var(--card-bg);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 40px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* --- 3. HOMEPAGE HERO & BUTTONS --- */
+/* =========================================
+   3. GLOBAL ELEMENT FIXES (IMAGES, TEXT)
+   ========================================= */
+
+/* SLEDGEHAMMER FIX: Prevents images from bleeding off screen */
+img, video, iframe {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Specific styling for images inside posts */
+.library-content img, article img {
+  margin: 20px auto;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+h1 { color: var(--teal-accent); margin-top: 0; line-height: 1.2; }
+h2 { color: var(--text-primary); margin-top: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+h3 { color: var(--text-primary); margin-top: 1.5rem; }
+
+p, li {
+  line-height: 1.7;
+  color: #cbd5e1; /* Slightly dim white for readability */
+}
+
+a { color: var(--teal-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* =========================================
+   4. COMPONENT: TILES / ACTIVITY CARDS
+   ========================================= */
+/* Consistent look for Recent Activity and Library Lists */
+
+.activity-card {
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+  align-items: flex-start;
+}
+
+.activity-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--teal-accent);
+  transform: translateX(4px);
+}
+
+/* The "D", "P", "B" Icon Box */
+.icon-box {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--teal-accent);
+  flex-shrink: 0; /* Prevents squishing */
+}
+
+/* Text inside the card */
+.card-text h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+}
+
+/* FORCE WHITE TEXT on Card Links */
+.card-text h3 a {
+  color: var(--text-primary) !important;
+  text-decoration: none;
+}
+
+.card-text h3 a:hover {
+  color: var(--teal-accent) !important;
+  text-decoration: none;
+}
+
+.card-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+}
+
+/* =========================================
+   5. COMPONENT: HOME PAGE PILLARS
+   ========================================= */
 .hero-box {
   background: rgba(10, 20, 40, 0.6);
   backdrop-filter: blur(8px);
@@ -66,107 +186,3 @@ body {
 
 .profile-pic {
   width: 140px;
-  height: 140px;
-  border-radius: 15px;
-  object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.1);
-}
-
-.pillar-grid {
-  display: flex;
-  gap: 15px;
-  margin: 20px 0 40px 0;
-}
-
-.pillar {
-  flex: 1;
-  background: var(--command-blue);
-  padding: 14px;
-  text-align: center;
-  border-radius: 8px;
-  color: white !important;
-  font-weight: bold;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: all 0.2s ease;
-}
-
-.pillar:hover {
-  background: #2a62b3;
-  transform: translateY(-2px);
-  border-color: var(--teal-accent);
-}
-
-/* --- 4. TILES (ACTIVITY CARDS) - FIXED --- */
-/* This section fixes the "purple link" and "missing box" issue */
-.activity-card {
-  display: flex;
-  gap: 20px;
-  background: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 16px;
-  transition: all 0.2s ease;
-  align-items: flex-start;
-}
-
-.activity-card:hover {
-  border-color: var(--teal-accent);
-  transform: translateX(4px);
-  background: rgba(13, 20, 37, 0.9);
-}
-
-/* The Box for D, P, B letters */
-.icon-box {
-  width: 45px;
-  height: 45px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--teal-accent);
-  flex-shrink: 0;
-}
-
-.card-text h3 {
-  margin: 0 0 6px 0;
-  font-size: 1.1rem;
-}
-
-/* Forces links to be white, overriding the browser default blue/purple */
-.card-text h3 a {
-  color: var(--text-primary) !important;
-  text-decoration: none;
-}
-
-.card-text h3 a:hover {
-  color: var(--teal-accent) !important;
-}
-
-.card-text p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--text-dim);
-  line-height: 1.5;
-}
-
-/* --- 5. NAVIGATION & TYPOGRAPHY --- */
-h1 { color: var(--teal-accent); margin-top: 0; }
-h2 { color: var(--text-primary); border-bottom: none; }
-
-.sidebar-nav { list-style: none; padding: 0; position: sticky; top: 40px; }
-.sidebar-nav li { margin-bottom: 15px; }
-.sidebar-nav a { color: var(--text-dim) !important; text-decoration: none; transition: 0.2s; }
-.sidebar-nav a:hover, .sidebar-nav a.active { color: var(--teal-accent) !important; font-weight: bold; }
-
-/* --- 6. MOBILE RESPONSIVENESS --- */
-@media (max-width: 768px) {
-  .library-wrapper { flex-direction: column; }
-  .library-sidebar { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; margin-bottom: 20px;}
-  .hero-box { flex-direction: column; text-align: center; }
-  .pillar-grid { flex-direction: column; }
-}
