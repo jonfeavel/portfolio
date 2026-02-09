@@ -32,17 +32,11 @@ The outcome was a set of pragmatic, data-informed strategic recommendations:
   </div>
 </div>
 
-This project demonstrates how I approach ambiguous data problems: framing the right questions, grounding analysis in real user context, and translating insight into decisions teams can act on.
-
 ---
 
 ## Additional Context & Sampling
 
-### Objective
-Take raw, quantitative fitness usage data and transform it into actionable insight by contextualizing the data through personas and behavioral framing, applying a structured analytical workflow, and producing product and marketing recommendations grounded in observed user behavior.
-
-### Key Observations & Insights
-The following snapshots represent a sample of the analytical process, from initial framing and persona development to the final synthesis of behavioral data.
+In this exercise, our **objective** was to leverage quantitative fitness usage data and transform it into actionable insight, by contextualizing the data thorugh personas and behavior framing, applying a structured analytical workflow, and producing product & marketing recommendations grounded in observed user behavior. The output was an executive style presentation that would be shared with, or distributed to, stakeholders to accelerate alignment and ultimately action product feature evolution. See below for a sampling of the executive presentation, of which you can download in full at the link below. 
 
 ![Project Overview]({{ '/assets/bellabeat-intro.PNG' | relative_url }})
 *Figure 1: High-level framing for enhancing Bellabeat marketing strategies via user data.*
@@ -65,6 +59,6 @@ The following snapshots represent a sample of the analytical process, from initi
 ---
 
 ## Full Executive Briefing & Sample Slideware
-For the complete technical methodology, SQL queries, and the comprehensive slide deck:
+Feel free to download the comprehensive presentation below, which includes the technical methodology, SQL queries, and expanded information around findings:
 
 [View Full Case Study (PDF)](https://github.com/user-attachments/files/25140468/2025.10.15.-.Google.Data.Analysis.Capstone.-.Bellabeat.pdf)
