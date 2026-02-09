@@ -58,26 +58,3 @@ The other side of the equation is within reach. Everyday practitioners can take 
 The barriers are falling fast. Those willing to lean in—even modestly—and embrace an outside-in mindset have a real opportunity to benefit disproportionately from this current wave of technological change.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Second, organizations that fail to embrace outside in thinking, run the risk of being bypassed by automation that seaks the easiest path to successful outcome. **
-I know this is sort of a loaded, or obvious, statement but let's unpack it. I used AI to distill sentiments from tech leaders to produce a vision statement for productization in the next five years and it reads as follows: _The future will not be defined by customers learning how to use your products, instead products and solutions must exist wherever your customers are. _
-It needs to be embedded, accessible, and more importantly it needs to deliver results, fast. In our example above, we leveraged tools that kept us out of the technical weeds, and more importantly delivered results. Leaders who don't understand that this pattern will not just apply to AI-products, are in for a hard lesson. The leaders who understand this and have a solid strategy, will understand that they need to embed their products in the ecosystems yesterday. To do this you need a command of the everyday use cases that live at the interaction layer with their customers.  This points straight back to the people who understand these use cases the best. Your entry level or mid-level practitioners. Even better, they are now equipped to backup their ideas, with quantitative and qualitative inputs, quickly and efficiently. The folks who have discarded their role definition, embraced new technology, and most importantly, focused on the objectives at hand, stand to benefit the most in the next five years. 
-
-
-For now, the takeaway is simple: advantage is QUICKLY shifting toward individuals and organizations that embrace outcomes and tooling that accelerates the pursuit of achieving them.  As AI lowers the barriers to execution, everyday citizens — not just technologists — are once again positioned to create, adapt, and drive meaningful change.
