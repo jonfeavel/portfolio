@@ -7,63 +7,64 @@ description: "An end-to-end analysis of fitness device data to inform product st
 ---
 
 ## Executive TL/DR
-This capstone analyzes smart device usage data for Bellabeat, a women’s wellness technology company, to identify behavioral trends and translate them into actionable product and marketing recommendations. 
+This capstone analyzes smart device usage data for Bellabeat, a women’s wellness technology company, to identify behavioral trends and translate them into actionable product and marketing recommendations. Using a structured data analyst framework:
 
-I combined quantitative analysis with contextual framing—personas, journeys, and lifecycle considerations—to move beyond descriptive statistics and toward product-relevant insight.
+**Ask → Prepare → Process → Analyze → Share → Act**
 
-![Project Overview]({{ '/assets/bellabeat-intro.PNG' | relative_url }})
-*Figure 1: High-level framing for enhancing Bellabeat marketing strategies via user data.*
+I combined quantitative analysis with contextual framing (personas, journeys, and lifecycle considerations) to move beyond descriptive statistics and toward product-relevant insight.
 
----
+The analysis surfaced clear relationships between activity volume, intensity, time-of-day usage patterns, and calorie expenditure. Segmenting users by behavioral profiles revealed meaningful differences in engagement and opportunity areas for personalization.
 
-## The Drill Down
-**Objective:** Transform raw, quantitative fitness usage data into actionable insight by applying a structured analytical workflow grounded in observed user behavior.
-
-![Problem Statement]({{ '/assets/bellabeat-problemstatement.PNG' | relative_url }})
-*Figure 2: Defining the Who, What, and How of the Bellabeat product strategy analysis.*
-
-### Analytical Framework
-I utilized the **Ask → Prepare → Process → Analyze → Share → Act** framework to ensure insights were both statistically valid and relevant to business decisions.
-
-![Contextualized Framing]({{ '/assets/bellabeat-framing.png' | relative_url }})
-*Figure 3: Preliminary steps taken to gather insights and map data schemas.*
-
-![User Personas]({{ '/assets/bellabeat-personas.png' | relative_url }})
-*Figure 4: Baseline personas (Lena, Sofia, Ava, Rachel) used to anchor the data in real-world human motivations.*
-
----
-
-## Key Observations & Insights
-The analysis surfaced clear relationships between activity volume, intensity, and time-of-day usage patterns.
-
-![The Six Key Findings]({{ '/assets/bellabeat-findings.png' | relative_url }})
-*Figure 5: Summary of core observations ranging from calorie burn correlations to data gaps.*
-
-![Data Visualizations]({{ '/assets/bellabeat-insights.png' | relative_url }})
-*Figure 6: Deep dive into hourly steps and behavioral segments derived from activity data.*
-
----
-
-## Strategic Recommendations
+The outcome was a set of pragmatic, data-informed strategic recommendations:
 
 <div class="recommendation-grid">
   <div class="rec-card">
     <h4>Segmented Experiences</h4>
-    <p>Tailor in-app content and notifications to distinct lifestyle profiles (e.g., high-intensity achievers vs. casual trackers).</p>
+    <p>Tailor in-app content, insights, and notifications to distinct lifestyle and activity profiles (e.g., high-intensity achievers vs. casual trackers).</p>
   </div>
   <div class="rec-card">
     <h4>Time-Based Engagement</h4>
-    <p>Deploy time-aware campaigns aligned to when users are most active, particularly for subscription engagement.</p>
+    <p>Deploy time-aware campaigns and nudges aligned to when users are most active, particularly for subscription engagement.</p>
   </div>
   <div class="rec-card">
     <h4>Real-Time Feedback</h4>
-    <p>Extend live notifications and progress feedback through wearable integrations to reinforce goal completion.</p>
+    <p>Extend live notifications and progress feedback through wearable integrations to reinforce goal completion and sustained engagement.</p>
   </div>
 </div>
 
+This project demonstrates how I approach ambiguous data problems: framing the right questions, grounding analysis in real user context, and translating insight into decisions teams can act on.
+
 ---
 
-## Full Executive Briefing
-For the complete technical methodology including SQL queries and the full slide deck:
+## Additional Context & Sampling
+
+### Objective
+Take raw, quantitative fitness usage data and transform it into actionable insight by contextualizing the data through personas and behavioral framing, applying a structured analytical workflow, and producing product and marketing recommendations grounded in observed user behavior.
+
+### Key Observations & Insights
+The following snapshots represent a sample of the analytical process, from initial framing and persona development to the final synthesis of behavioral data.
+
+![Project Overview]({{ '/assets/bellabeat-intro.PNG' | relative_url }})
+*Figure 1: High-level framing for enhancing Bellabeat marketing strategies via user data.*
+
+![Problem Statement]({{ '/assets/bellabeat-problemstatement.PNG' | relative_url }})
+*Figure 2: Defining the business problem and success criteria to anchor the technical analysis.*
+
+![Contextualized Framing]({{ '/assets/bellabeat-framing.png' | relative_url }})
+*Figure 3: Mapping data schemas and preliminary behavioral flows.*
+
+![User Personas]({{ '/assets/bellabeat-personas.png' | relative_url }})
+*Figure 4: Baseline personas used to translate quantitative trends into human-centric lifestyle segments.*
+
+![The Six Key Findings]({{ '/assets/bellabeat-findings.png' | relative_url }})
+*Figure 5: Synthesis of core observations, highlighting the relationship between intensity, duration, and engagement.*
+
+![Data Visualizations]({{ '/assets/bellabeat-insights.jpg' | relative_url }})
+*Figure 6: Deep dive into temporal usage patterns and step-count distributions.*
+
+---
+
+## Full Executive Briefing & Sample Slideware
+For the complete technical methodology, SQL queries, and the comprehensive slide deck:
 
 [View Full Case Study (PDF)](https://github.com/user-attachments/files/25140468/2025.10.15.-.Google.Data.Analysis.Capstone.-.Bellabeat.pdf)
