@@ -1,4 +1,4 @@
-/* Strategy Aesthetic - Restored & Refined */
+/* --- CORE BRANDING & VARIABLES --- */
 :root {
   --command-blue: #1e4b8a; 
   --nav-bg: #112240;      
@@ -19,7 +19,67 @@ body {
   background-color: #020617; 
 }
 
-/* 1. Main Layout Containers (Keeping your site structure intact) */
+/* --- SECTION 1: HOMEPAGE / LANDING LAYOUT (RESTORED) --- */
+.landing-container {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.hero-box {
+  background: rgba(30, 75, 138, 0.85); 
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.pillar-grid {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.pillar {
+  flex: 1;
+  background: var(--command-blue);
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.activity-card {
+  background: linear-gradient(180deg, #16203a 0%, #0d1425 100%);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* --- SECTION 2: LIBRARY / ASSET PAGE LAYOUT (RESTORED) --- */
 .library-wrapper {
   display: flex;
   max-width: 1300px;
@@ -41,76 +101,49 @@ body {
   top: 40px;
 }
 
-.library-content {
-  flex: 1;
-}
+.library-content { flex: 1; }
 
-/* 2. Glass Content Surface (Asset Pages) */
+/* --- SECTION 3: NEW UPDATES (GLASS, ICON, LINE LENGTH) --- */
+
+/* Glass Surface Container */
 article, .post-header-box {
-  background: rgba(10, 20, 40, 0.85); /* Your requested color */
+  background: rgba(10, 20, 40, 0.85); /* Your specific RGBA request */
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  padding: 40px; /* Your requested padding */
-  margin-bottom: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  padding: 40px; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
 }
 
-/* 3. Header Alignment (Icon on Left) */
+/* Left-Justified Header with Icon */
 .post-header-container {
   display: flex;
-  align-items: flex-start;
-  gap: 25px;
+  align-items: center;
+  gap: 30px;
   text-align: left;
 }
 
 .header-icon {
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.header-text-block {
-  display: flex;
-  flex-direction: column;
-}
+.post-title { font-size: 2.2rem; margin: 0; }
+.post-meta { color: var(--teal-accent); font-weight: bold; font-size: 0.9rem; }
+.post-description { color: #94a3b8; font-size: 1.1rem; margin-top: 5px; }
 
-.post-title {
-  font-size: 2.2rem;
-  margin: 0 0 5px 0 !important;
-  line-height: 1.2;
-}
-
-.post-meta {
-  color: var(--teal-accent);
-  font-weight: bold;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-
-.post-description-lead {
-  font-size: 1.1rem;
-  color: #94a3b8;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* 4. Body Text Constraint (720px - 820px) */
-.post-body p, 
-article p {
-  max-width: 780px; /* Constrained line length */
-  margin-left: 0;   /* Left justified */
+/* Body Text Constraint (The 720-820px Goal) */
+.post-body p, article p {
+  max-width: 780px; 
+  margin-left: 0; 
   margin-right: auto;
   line-height: 1.7;
-  color: #cbd5e1;
-  margin-bottom: 20px;
 }
 
-/* 5. RESTORED: Recommendation Grid Tiles */
+/* RESTORED: Strategic Recommendation Tiles */
 .recommendation-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -123,31 +156,4 @@ article p {
   border: 1px solid var(--teal-accent);
   padding: 25px;
   border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.rec-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.rec-card h4 {
-  color: var(--teal-accent);
-  margin: 0 0 15px 0;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1.5px;
-}
-
-/* 6. General Elements */
-.sidebar-nav { list-style: none; padding: 0; }
-.sidebar-nav li { margin-bottom: 20px; }
-.sidebar-nav a { text-decoration: none; color: #fff; }
-.sidebar-nav a.active { color: var(--teal-accent) !important; font-weight: 700; }
-
-article img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 25px 0;
-  border: 1px solid rgba(255,255,255,0.1);
 }
