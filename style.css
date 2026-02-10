@@ -305,3 +305,67 @@ article blockquote p,
   margin: 0;
 }
 
+/* =========================================
+   MOBILE FIX: Stack sidebar + content
+   ========================================= */
+@media (max-width: 900px) {
+
+  /* Stack instead of side-by-side */
+  .library-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 14px;
+  }
+
+  /* Sidebar becomes a top nav bar */
+  .library-sidebar {
+    width: 100%;
+    position: relative; /* disable sticky on mobile */
+    top: auto;
+  }
+
+  /* Make nav compact + wrap */
+  .sidebar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  /* Hide the divider line in the nav on mobile */
+  .sidebar-nav hr {
+    display: none;
+  }
+
+  /* Make nav items look like simple links/chips */
+  .sidebar-nav li {
+    margin: 0;
+  }
+
+  .sidebar-nav a {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+  }
+
+  .sidebar-nav a.active {
+    border-color: rgba(94,234,212,0.65);
+  }
+
+  /* Content fills full width with smaller padding */
+  .library-content,
+  article {
+    width: 100%;
+    padding: 22px 18px;
+  }
+
+  /* Optional: slightly smaller headings to avoid wrapping weird */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.35rem; }
+}
+
