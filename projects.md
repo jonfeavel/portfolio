@@ -21,17 +21,9 @@ permalink: /projects/
 
   <main class="library-content">
     <h1>Side Projects</h1>
-    <p class="subtitle"Beyond my professional portfolio, I try to get out and experiment with other creative endeavors, even some freelance activities. I'll be sharing a few creative endeavors and experiments here along the way. </p>
 
-    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 40px 0;">
+    <p class="subtitle">
+      Beyond my professional portfolio, I try to get out and experiment with other creative endeavors, including some freelance work. I’ll share a few examples here over time.
+    </p>
 
-    <div class="activity-card">
-      <div class="icon-box">C</div>
-      <div class="card-text">
-        <h3><a href="https://headlines2comics.com" target="_blank">Headlines to Comics</a></h3>
-        <p>One panel comics created by transforming daily news headlines into satirical — and often mediocre — stylized comic art.</p>
-      </div>
-    </div>
-  </main>
-
-</div>
+    <hr style="border: 0; border-top: 1px solid rgba(255
