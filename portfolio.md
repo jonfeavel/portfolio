@@ -31,17 +31,19 @@ permalink: /portfolio/
     <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 30px 0;">
 
     <div class="activity-feed">
-      {% for item in site.portfolio %}
-        <div class="activity-card">
-          <div class="icon-box">
-            {{ item.title | slice: 0 | upcase }}
+      {% for item in site.posts %}
+        {% if item.categories contains 'portfolio' or item.url contains '/portfolio/' %}
+          <div class="activity-card">
+            <div class="icon-box">
+              {{ item.title | slice: 0 | upcase }}
+            </div>
+            
+            <div class="card-text">
+              <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+              <p>{{ item.excerpt | strip_html | truncate: 120 }}</p>
+            </div>
           </div>
-          
-          <div class="card-text">
-            <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
-            <p>{{ item.description }}</p>
-          </div>
-        </div>
+        {% endif %}
       {% endfor %}
     </div>
   </main>
