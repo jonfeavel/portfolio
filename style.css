@@ -369,3 +369,44 @@ article blockquote p,
   h2 { font-size: 1.35rem; }
 }
 
+/* =========================================
+   6. COMPONENT: FRAMEWORK FLOW + CALLOUTS
+   ========================================= */
+
+/* Wrapper card for frameworks / callouts */
+.callout-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  padding: 18px 18px;
+  margin: 18px 0;
+}
+
+/* Small label above content */
+.callout-label {
+  margin: 0 0 12px 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* Framework "pills" row */
+.framework-flow {
+  display: flex;
+  flex-wrap: wrap;            /* critical for mobile */
+  gap: 10px;
+  align-items: center;
+}
+
+.framework-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(13, 20, 37, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
