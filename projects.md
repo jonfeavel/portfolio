@@ -9,7 +9,7 @@ permalink: /projects/
   <aside class="library-sidebar">
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="{{ '/' | relative_url }}">← Home</a></li>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
 
         <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
 
