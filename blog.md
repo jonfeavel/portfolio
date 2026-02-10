@@ -21,9 +21,10 @@ permalink: /blog/
 
   <main class="library-content">
     <h1>Blog</h1>
-    <p class="subtitle">Perspectives and Writing</p>
 
-    <p>Below is a curated collection of perspectives I’ve put together throughout my professional journey.</p>
+    <p class="subtitle">
+      Below is a curated collection of perspectives and writing I’m putting together throughout my professional journey.
+    </p>
 
     <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 30px 0;">
 
