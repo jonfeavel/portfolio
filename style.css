@@ -375,10 +375,10 @@ article blockquote p,
 
 /* Wrapper card for frameworks / callouts */
 .callout-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(94, 234, 212, 0.06);
+  border: 1px solid rgba(94, 234, 212, 0.18);
   border-radius: 12px;
-  padding: 18px 18px;
+  padding: 18px;
   margin: 18px 0;
 }
 
@@ -394,11 +394,12 @@ article blockquote p,
 /* Framework "pills" row */
 .framework-flow {
   display: flex;
-  flex-wrap: wrap;            /* critical for mobile */
+  flex-wrap: wrap; /* critical for mobile */
   gap: 10px;
   align-items: center;
 }
 
+/* The pill */
 .framework-step {
   display: inline-flex;
   align-items: center;
@@ -406,14 +407,49 @@ article blockquote p,
   padding: 10px 12px;
   border-radius: 999px;
   background: rgba(13, 20, 37, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  color: var(--text-primary);
-  font-weight: 600;
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  color: rgba(94, 234, 212, 0.95);
+  font-weight: 700;
   font-size: 0.95rem;
-
-/* Teal-tinted card background */
-.callout-card {
-  background: rgba(94, 234, 212, 0.06);
-  border-color: rgba(94, 234, 212, 0.18);
 }
+
+/* The number in the pill */
+.framework-step .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: rgba(94, 234, 212, 0.14);
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  color: rgba(94, 234, 212, 0.95);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+/* Arrows */
+.framework-arrow {
+  color: rgba(94, 234, 212, 0.85);
+  font-weight: 800;
+}
+
+/* Recommendations layout */
+.reco-grid {
+  display: grid;
+  gap: 14px;
+}
+
+/* Make the recommendation headers teal */
+.reco-title {
+  margin: 0 0 6px 0;
+  color: rgba(94, 234, 212, 0.95);
+}
+
+/* Slightly dim body copy */
+.reco-body {
+  margin: 0;
+  color: #cbd5e1;
+}
+
 
