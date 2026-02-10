@@ -21,9 +21,7 @@ permalink: /projects/
 
   <main class="library-content">
     <h1>Side Projects</h1>
-    <p class="subtitle">Creative Endeavors & Experiments</p>
-    
-    <p>Beyond my professional portfolio, I do try to get out and experiment with other creative endeavors and freelance. I'll be sharing a few examples, here, over time</p>
+    <p class="subtitle"Beyond my professional portfolio, I try to get out and experiment with other creative endeavors, even some freelance activities. I'll be sharing a few creative endeavors and experiments here along the way. </p>
 
     <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 40px 0;">
 
