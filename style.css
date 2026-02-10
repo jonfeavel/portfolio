@@ -410,3 +410,10 @@ article blockquote p,
   color: var(--text-primary);
   font-weight: 600;
   font-size: 0.95rem;
+
+/* Teal-tinted card background */
+.callout-card {
+  background: rgba(94, 234, 212, 0.06);
+  border-color: rgba(94, 234, 212, 0.18);
+}
+
