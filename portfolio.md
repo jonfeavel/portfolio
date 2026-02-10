@@ -21,8 +21,6 @@ permalink: /portfolio/
 
   <main class="library-content">
     <h1>Portfolio</h1>
-    <p class="subtitle">Selected Work and Frameworks.</p>
-    
     <p> class="subtitle">Below is a curated collection of **select work from my professional journey**. From coursework, to reasearch, or custom framework creation, each piece is presented in a way that feels as though we were sitting across from one another in a meeting room.</p>
 
     <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 40px 0;">
