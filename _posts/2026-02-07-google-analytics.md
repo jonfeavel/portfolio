@@ -10,6 +10,45 @@ description: "An end-to-end analysis of fitness device data to inform product st
 This capstone analyzes smart device usage data for Bellabeat, a women’s wellness technology company, to identify behavioral trends and translate them into actionable product and marketing recommendations. Using a structured data analyst framework:
 
 **Ask → Prepare → Process → Analyze → Share → Act**
+<div class="callout-card">
+  <p class="callout-label">Framework used</p>
+
+  <div class="framework-flow" aria-label="Analysis framework: Ask, Prepare, Process, Analyze, Share, Act">
+    <span class="framework-step"><span class="step-num">1</span>Ask</span>
+    <span class="framework-arrow">→</span>
+    <span class="framework-step"><span class="step-num">2</span>Prepare</span>
+    <span class="framework-arrow">→</span>
+    <span class="framework-step"><span class="step-num">3</span>Process</span>
+    <span class="framework-arrow">→</span>
+    <span class="framework-step"><span class="step-num">4</span>Analyze</span>
+    <span class="framework-arrow">→</span>
+    <span class="framework-step"><span class="step-num">5</span>Share</span>
+    <span class="framework-arrow">→</span>
+    <span class="framework-step"><span class="step-num">6</span>Act</span>
+  </div>
+</div>
+
+<div class="callout-card">
+  <p class="callout-label">Recommendations</p>
+
+  <div class="reco-grid">
+    <div class="reco-item">
+      <h3 class="reco-title">Segmented Experiences</h3>
+      <p class="reco-body">Tailor in-app content, insights, and notifications to distinct lifestyle and activity profiles (e.g., high-intensity achievers vs. casual trackers).</p>
+    </div>
+
+    <div class="reco-item">
+      <h3 class="reco-title">Time-Based Engagement</h3>
+      <p class="reco-body">Deploy time-aware campaigns and nudges aligned to when users are most active—especially for subscription engagement.</p>
+    </div>
+
+    <div class="reco-item">
+      <h3 class="reco-title">Real-Time Feedback Loops</h3>
+      <p class="reco-body">Extend live notifications and progress feedback through wearable integrations to reinforce goal completion and sustained engagement.</p>
+    </div>
+  </div>
+</div>
+
 
 I combined quantitative analysis with contextual framing (personas, journeys, and lifecycle considerations) to move beyond descriptive statistics and toward product-relevant insight.
 
