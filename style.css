@@ -213,3 +213,70 @@ a:hover { text-decoration: underline; }
   background: rgba(255, 255, 255, 0.15);
   border-color: #ffffff;
 }
+
+/* =========================================
+   5A. COMPONENT: HOME PAGE HERO (PROFILE TILE)
+   ========================================= */
+
+.hero-box {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 22px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 14px; /* matches your existing style language */
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.hero-text {
+  min-width: 0; /* prevents weird overflow in flex layouts */
+}
+
+.hero-text h1 {
+  margin: 0 0 6px 0;
+  font-size: 2.2rem;
+  letter-spacing: 0.2px;
+}
+
+.hero-text h3 {
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.hero-text p {
+  margin: 0;
+  color: var(--text-dim);
+  max-width: 70ch; /* improves readability */
+}
+
+/* Mobile: stack image above text */
+@media (max-width: 720px) {
+  .hero-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .pillar-grid {
+    flex-direction: column;
+  }
+}
+
