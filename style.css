@@ -280,3 +280,13 @@ a:hover { text-decoration: underline; }
   }
 }
 
+/* Blog & article section headers */
+.library-content h2,
+article h2 {
+  color: var(--teal-accent);
+  margin-top: 2.5rem;
+  border-bottom: 1px solid rgba(94, 234, 212, 0.25);
+  padding-bottom: 10px;
+}
+
+
