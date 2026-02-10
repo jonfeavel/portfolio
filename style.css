@@ -289,4 +289,19 @@ article h2 {
   padding-bottom: 10px;
 }
 
+/* Blockquotes (callouts, key ideas) */
+article blockquote,
+.library-content blockquote {
+  margin: 24px 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--teal-accent);
+  background: rgba(94, 234, 212, 0.08);
+  font-style: italic;
+  color: #e5e7eb;
+}
+
+article blockquote p,
+.library-content blockquote p {
+  margin: 0;
+}
 
