@@ -53,7 +53,7 @@ In this exercise, our **objective** was to leverage quantitative fitness usage d
 ![The Six Key Findings]({{ '/assets/bellabeat-findings.png' | relative_url }})
 *Figure 5: Synthesis of core observations, highlighting the relationship between intensity, duration, and engagement.*
 
-![Data Visualizations]({{ '/assets/bellabeat-insights.jpg' | relative_url }})
+![Data Visualizations]({{ '/assets/bellabeat-insights.png' | relative_url }})
 *Figure 6: Deep dive into temporal usage patterns and step-count distributions.*
 
 ---
