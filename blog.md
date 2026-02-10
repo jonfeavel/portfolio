@@ -9,7 +9,7 @@ permalink: /blog/
   <aside class="library-sidebar">
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="{{ '/' | relative_url }}">← Home</a></li>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
         <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
         <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
         <li><a href="{{ '/blog/' | relative_url }}" class="active">Blog</a></li>
@@ -22,10 +22,10 @@ permalink: /blog/
   <main class="library-content">
     <h1>Blog</h1>
     <p class="subtitle">Perspectives and Writing</p>
-    
-    <p>Below is a curated collection of perspectives I've put together throughout my professional journey.</p>
 
-    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 40px 0;">
+    <p>Below is a curated collection of perspectives I’ve put together throughout my professional journey.</p>
+
+    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 30px 0;">
 
     <div class="activity-feed">
       {% for item in site.posts %}
