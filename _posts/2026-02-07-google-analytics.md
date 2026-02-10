@@ -48,21 +48,6 @@ This capstone analyzes smart device usage data for Bellabeat, a women’s wellne
   </div>
 </div>
 
-<div class="recommendation-grid">
-  <div class="rec-card">
-    <h4>Segmented Experiences</h4>
-    <p>Tailor in-app content, insights, and notifications to distinct lifestyle and activity profiles (e.g., high-intensity achievers vs. casual trackers).</p>
-  </div>
-  <div class="rec-card">
-    <h4>Time-Based Engagement</h4>
-    <p>Deploy time-aware campaigns and nudges aligned to when users are most active, particularly for subscription engagement.</p>
-  </div>
-  <div class="rec-card">
-    <h4>Real-Time Feedback</h4>
-    <p>Extend live notifications and progress feedback through wearable integrations to reinforce goal completion and sustained engagement.</p>
-  </div>
-</div>
-
 ---
 
 ## Additional Context & Sampling
