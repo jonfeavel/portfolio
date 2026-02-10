@@ -7,7 +7,7 @@ description: "An end-to-end analysis of fitness device data to inform product st
 ---
 
 ## Executive TL/DR
-This capstone analyzes smart device usage data for Bellabeat, a women’s wellness technology company, to identify behavioral trends and translate them into actionable product and marketing recommendations. Using a structured data analyst framework (below), I combined quantitative analysis with contextual framing (personas, journeys, and lifecycle considerations) to move beyond descriptive statistics and toward product-relevant insights - culminating in the three recommendaitons you see below. 
+This capstone analyzes smart device usage data for Bellabeat, a women’s wellness technology company, to identify behavioral trends and translate them into actionable product and marketing recommendations. Using a structured data analyst framework (below), I combined quantitative analysis with contextual framing (personas, journeys, and lifecycle considerations) to move beyond descriptive statistics and toward product-relevant insights - culminating in the three recommendations you see below. 
 
 <div class="callout-card">
   <p class="callout-label">Framework used</p>
