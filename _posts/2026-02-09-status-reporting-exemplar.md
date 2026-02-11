@@ -76,4 +76,21 @@ Don’t stack-rank information indiscriminately. Design reports so critical info
 ### **H — How You Gather and Deliver Matters**
 Timing, channel, and clarity all shape perception. A well-crafted update delivered at the wrong moment can still fail.
 
-Great communicators optimize for **how information is consumed**, not just what is shared. Send updates at a time that helps your audience
+Great communicators optimize for **how information is consumed**, not just what is shared. Send updates at a time that helps your audience, lead with essential information, and make it easy to extract what matters.
+
+### **I — Invoke Action**
+A simple litmus test: **are the next steps unmistakable?**
+
+A strong status report should either reinforce confidence through progress or clearly articulate what—or who—is needed to maintain momentum.
+
+### **S — Shorten Relentlessly**
+If a status cannot be conveyed on a single slide or in a single elevator ride, clarity is likely missing.
+
+This isn’t about oversimplifying—it’s about ensuring everyone understands what matters most *right now*. If everything feels new and urgent, it may signal misalignment, lack of adoption, or insufficient feedback loops.
+
+---
+
+## Why This Matters
+
+When done well, status reporting becomes the **primary trust-building mechanism** between teams and stakeholders.  
+When done poorly, it becomes noise.
