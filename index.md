@@ -10,8 +10,8 @@ title: Home
     <img src="{{ '/assets/Head-shot-icon.PNG' | relative_url }}" class="profile-pic" alt="J. Feavel">
     <div class="hero-text">
       <h1>J Feavel</h1>
-      <h3>Simplifying Complexity as AI Terraforms the Tech Industry</h3>
-      <p>I believe AI is terraforming the tech industry, shifting advantage toward those who combine technical curiosity with an unwavering focus on outcomes.  In my pursuit of making complex systems more approachable, I share practical exemplars and perspectives from my journey in technology. This site is how I document a small piece of what I’m learning—and what’s working.</p>
+      <h3>Making Sense of Complexity as AI Terraforms the Tech Industry</h3>
+      <p>AI is terraforming the tech industry, shifting the advantage toward those who combine technical curiosity with an unwavering focus on outcomes. In my pursuit of making complex systems more approachable, I created this site to distill select exemplars and perspectives from my work—shared in progress, refined through experience, and grounded in real-world application.
     </div>
   </header>
 
