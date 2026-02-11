@@ -11,7 +11,9 @@ title: Home
     <div class="hero-text">
       <h1>J Feavel</h1>
       <h3>Making Sense of Complexity as AI Terraforms the Tech Industry</h3>
-      <p>AI is terraforming the tech industry, shifting the advantage toward those who combine technical curiosity with an unwavering focus on outcomes. In my pursuit of making complex systems more approachable, I created this site to distill select exemplars and perspectives from my work—shared in progress, refined through experience, and grounded in real-world application.
+      <p> AI is terraforming the tech industry, shifting the advantage toward those who combine technical curiosity with an unwavering focus on outcomes. In my pursuit of making complex systems more approachable, I created this site to distill select exemplars and perspectives from my work—shared in progress, refined through experience, and grounded in real-world application.
+</p>
+
     </div>
   </header>
 
